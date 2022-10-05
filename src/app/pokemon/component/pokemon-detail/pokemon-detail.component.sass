@@ -2,12 +2,10 @@
     
     h1 
         margin: 120px auto 50px auto,
-        color: gold,
-        -webkit-text-stroke: 5px blue,
+        color: red,
         text-align: center,
         font-size: 80px,
-        text-shadow: 1px 1px 10px black,
-        font-family: fantasy
+        font-family: 'Silkscreen',
 
     .container
         display: flex,
@@ -21,7 +19,7 @@
 
             .button
                 position: absolute,
-                top: 370px,
+                top: 180px,
                 width: 40px,
                 height: 40px,
                 border-radius: 50px,
@@ -38,30 +36,42 @@
                 mat-icon
                     color: white,
                 
-            .pokedex_intro
-                height: 160px,
-                color: white,
-                position: relative
-
-                .pokedex_id
+            .pokedex_image 
                     position: absolute,
-                    font-size: 20px,
-                    font-weight: bold,
-                    right: 30px,
-                    top: 35px,
-                .pokedex_image
-                    position: absolute,
-                    right: 120px,
-                    bottom: -100px,
-
+                    margin-left: auto,
+                    margin-right: auto,
+                    left: 0,
+                    right: 0,
+                    top: 10px,
+                    width: fit-content,
+                    height: fit-content,
+                    
                     img
                         width: 250px,
                         height: 250px,
 
+            .pokedex_intro
+                height: 160px,
+                color: white,
+                display: flex,
+                flex-direction: column
+                flex-wrap: wrap,
+
+                .init
+                    width: 90%,
+                    margin: 30px 0px 20px 20px,
+                    display: flex,
+                    flex-direction: row,
+                    justify-content: space-between,
+
+                .pokedex_id                   
+                    font-size: 20px,
+                    font-weight: bold,
+                
+
                 .pokedex_name
                     font-size: 30px,
                     font-weight: bold,
-                    padding: 30px 0px 20px 20px,
 
                 .pokedex_types
                     padding-left: 30px,
@@ -76,7 +86,7 @@
             .pokedex_info
                 background-color: white
                 border-radius: 20px,
-                height: 440px,
+                min-height: 250px,
                 padding: 60px 10px 0px 10px,
 
                     
@@ -98,5 +108,23 @@
                             width: 280px,
                             span
                                 margin-right: 10px,
-                
 
+.mat-tab-body-wrapper
+  flex-grow: 1,
+
+@media (max-width: 600px)
+    .pokedex
+        max-width: 90% !important,
+
+    .pokedex_image
+            top: 100px !important, 
+            img
+                width: 130px !important,
+                height: 130px !important,
+
+    h1
+        font-size: 60px !important,
+                
+@font-face 
+    font-family: "Silkscreen",
+    src: url("//db.onlinewebfonts.com/t/2761fd10ed41681256d3e77d0ee05903.woff"),

@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   encapsulation: ViewEncapsulation.None,
 })
 export class PokemonDetailComponent implements OnInit {
-  title = 'PokéDex';
+  title = 'POKEDEX';
   detail:DetailResponse | undefined;
   type : string  = '';
   prev : number = 0;

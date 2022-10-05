@@ -5,18 +5,20 @@
             <a *ngIf = "prev > 0" href = "pokemon/{{prev}}" >
                 <div class="button button_prev" [appPokemonType] = "type"><mat-icon>keyboard_arrow_left</mat-icon></div>
             </a>
+            <a href = "pokemon/{{next}}">
+                <div class="button button_next" [appPokemonType] = "type"><mat-icon>keyboard_arrow_right</mat-icon></div>
+            </a>
+            <div class="pokedex_image">
+                <img  src="{{detail.sprites.front_default}}">
+            </div>
             <div class="pokedex_intro">
-                <div class="pokedex_name">{{detail.name}}</div>
+                <div class="init">
+                    <div class="pokedex_name">{{detail.name}}</div>
+                    <div class="pokedex_id">{{detail.id | pokemonId}}</div>
+                </div>
                 <div class="pokedex_types">
                     <span class = "pokedex_type" *ngFor = 'let type of detail.types'>{{type.type.name}}</span>
-                </div>
-                <div class="pokedex_id">{{detail.id | pokemonId}}</div>
-                <div class="pokedex_image">
-                    <img  src="{{detail.sprites.front_default}}">
-                </div>
-                <a href = "pokemon/{{next}}">
-                    <div class="button button_next" [appPokemonType] = "type"><mat-icon>keyboard_arrow_right</mat-icon></div>
-                </a>
+                </div>                
             </div>
             <div class="pokedex_info">
                 <mat-tab-group mat-align-tabs="center">

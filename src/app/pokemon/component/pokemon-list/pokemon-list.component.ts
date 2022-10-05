@@ -8,7 +8,7 @@ import { Pokemon } from '../../models/pokemon-model';
   styleUrls: ['./pokemon-list.component.sass']
 })
 export class PokemonListComponent implements OnInit {
-  title = 'PokéDex';
+  title = 'POKEDEX';
   pokemons : Pokemon[] | undefined;
   constructor(private pokemonService : PokemonServiceService) { }
 

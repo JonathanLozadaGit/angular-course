@@ -1,12 +1,10 @@
 .module
     h1 
-        margin: 120px auto 80px auto,
+        margin: 120px auto 50px auto,
         color: gold,
-        -webkit-text-stroke: 5px blue,
         text-align: center,
         font-size: 80px,
-        text-shadow: 1px 1px 10px black,
-        font-family: fantasy
+        font-family: 'Silkscreen',
 
     .container
         display: flex,
@@ -25,4 +23,13 @@
     .item
         flex: 1,
         width: 100%,
+
+@media (max-width: 600px)
+
+    h1
+        font-size: 60px !important,
+                
+@font-face 
+    font-family: "Silkscreen",
+    src: url("//db.onlinewebfonts.com/t/2761fd10ed41681256d3e77d0ee05903.woff"),
         
