@@ -1,0 +1,50 @@
+<div class="module" *ngIf = 'detail'>
+    <h1>{{title}}</h1>
+    <div class="container">
+        <div class="pokedex data" [appPokemonType] = "type">
+            <a *ngIf = "prev > 0" href = "pokemon/{{prev}}" >
+                <div class="button button_prev" [appPokemonType] = "type"><mat-icon>keyboard_arrow_left</mat-icon></div>
+            </a>
+            <div class="pokedex_intro">
+                <div class="pokedex_name">{{detail.name}}</div>
+                <div class="pokedex_types">
+                    <span class = "pokedex_type" *ngFor = 'let type of detail.types'>{{type.type.name}}</span>
+                </div>
+                <div class="pokedex_id">{{detail.id | pokemonId}}</div>
+                <div class="pokedex_image">
+                    <img  src="{{detail.sprites.front_default}}">
+                </div>
+                <a href = "pokemon/{{next}}">
+                    <div class="button button_next" [appPokemonType] = "type"><mat-icon>keyboard_arrow_right</mat-icon></div>
+                </a>
+            </div>
+            <div class="pokedex_info">
+                <mat-tab-group mat-align-tabs="center">
+                    <mat-tab label="About" >
+                        <div class="pokedex_tab">
+                            <div class="pokedex_row" *ngIf = 'detail.base_experience'>
+                                <div class = "row_title">Base experience</div>
+                                <div class = "row_value">{{detail.base_experience}}</div>
+                            </div>
+                            <div class="pokedex_row" *ngIf = 'detail.weight'>
+                                <div class = "row_title">Height</div>
+                                <div class = "row_value">{{detail.height / 10}} m</div>
+                            </div>
+                            <div class="pokedex_row" *ngIf = 'detail.height'>
+                                <div class = "row_title">Weight</div>
+                                <div class = "row_value">{{detail.weight / 10}} kg</div>
+                            </div>
+                            <div class="pokedex_row" *ngIf = 'detail.height'>
+                                <div class = "row_title">Abilities</div>
+                                <div class = "row_value">
+                                    <span *ngFor = 'let ability of detail.abilities'>{{ability.ability.name}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Base Stats">Base Stats</mat-tab>
+                  </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,132 @@
+.module-form
+    color: white,
+    font-family: fantasy
+    
+    input, textarea, select
+        border: 3px solid gray,
+
+    input[type=radio]:checked
+        background-color: red,
+
+
+    .intro
+        display: flex,
+        flex-direction: column,
+        align-content: center,
+        flex-wrap: wrap,
+        h1 
+            margin: 120px 0 10px 0,
+            text-align: center,
+            font-size: 70px,
+            text-shadow: 1px 1px 10px black,
+            font-family: fantasy
+        
+        h2
+            margin: 10px auto 10px auto,
+            text-align: center,
+            font-size: 20px,
+            text-shadow: 1px 1px 10px black,
+            font-family: fantasy
+
+    .cform
+        display: flex,
+        flex-direction: column,
+        align-items: center,
+        input:focus
+            border: 3px solid white,
+        form
+            background-color: rgba(203, 213, 218, 0.2),
+            border-radius: 10px,
+            width: 500px,
+            padding:20px,
+            margin: 30px 0px,
+            display: flex,
+            flex-direction: column,
+            flex-wrap: wrap,
+            flex-grow: 1,
+            align-content: center,
+
+            .item_row
+                width:400px,
+                align-self: stretch,
+                display: flex,
+                flex-wrap: wrap,
+                margin-bottom: 10px,
+
+                label
+                    width: 150px,
+                    font-size: 20px,
+                input
+                    padding: 10px,
+                    width: 350px,
+                    border-radius: 5px,
+
+            .item_col
+                width:380px,
+                align-self: stretch,
+                display: flex,
+                flex-direction: column,
+                margin-bottom: 20px,
+
+                label
+                    width: 500px,
+                    font-size: 20px,
+                    margin-bottom: 10px,
+                select
+                    padding: 10px,
+
+                textarea
+                    padding: 10px,
+                    height: 50px,
+                    border-radius: 5px,
+
+                input
+                    padding: 10px,
+                    border-radius: 5px,
+
+            .item_radius
+                align-self: stretch,
+                display: flex,
+                flex-wrap: wrap,
+                margin-bottom: 10px,
+
+                input
+                    width: 100px,
+
+            .item_multiple
+                align-self: stretch,
+                display: flex,
+                flex-wrap: wrap,
+                flex-direction: row,
+                align-items: baseline,
+                justify-content: center,
+                margin-bottom: 10px,
+
+                input 
+                    width: 15px,
+                label
+                    width: 100px,
+                    font-size: 14px,
+
+            .error-msg
+                width: 350px,
+                background-color: crimson,
+                border-radius: 5px,
+                padding: 0px 10px,
+                
+            button.submit
+                margin-top:20px,
+                align-self: stretch,
+                height: 30px,
+                border-radius: 5px,
+                background-color: gray,
+                color: white
+
+
+
+                
+                
+            
+
+            
+                

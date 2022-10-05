@@ -1,0 +1,20 @@
+<article *ngIf = 'character' class = 'data'>
+    <span class = 'data-intro-status' [attr.data-status] = 'character.status'>{{character.status}}</span>
+    <div class = 'data-image'>
+        <img class = 'image' src="{{character.image}}"  >
+    </div>
+    <div class = 'data-info'>
+        <div class = 'data-section'>
+            <span class='data-section-title'>{{character.name}}</span>
+            <span>{{character.species}}</span>
+          </div>
+          <div class = 'data-section'>
+            <span class='data-section-title'>Last known location:</span>
+            <span>{{character.location.name}}</span>
+          </div>
+          <div class = 'data-section'>
+            <span class='data-section-title'>First seen in:</span>
+            <span class = 'data-wrap'>{{firstEpisode?.name}} ({{firstEpisode?.episode}})</span>
+          </div>
+    </div>
+</article>

@@ -1,0 +1,10 @@
+<article *ngIf = 'pokemon' class = 'data type_{{type}}' >
+    <a href="/pokemon/{{pokemon.detail?.id}}">
+        <div class="data_image">
+            <img class = "data_img" src="{{pokemon.detail?.sprites?.front_default}}" alt="">
+        </div>
+        <div class="data_name">{{pokemon.name}}</div>
+        <div class="data_type"*ngFor = 'let type of pokemon.detail?.types' >{{type.type.name}}</div>
+    </a>
+    
+</article>

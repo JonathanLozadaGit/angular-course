@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+<div class = "buttons">
+  <button class = " button button-kill" (click) = "killAllCharacters()">Kill All</button>
+  <button class = "button button-revive" (click) = "reviveAllCharacters()">Revive All</button>
+</div>
+<div class="container">
+  <div *ngFor = 'let character of characters' class="item">
+     <app-rm-card [character]="character"></app-rm-card>
+    <br>
+  </div>  
+</div>

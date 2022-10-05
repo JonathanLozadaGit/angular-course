@@ -1,0 +1,21 @@
+<article *ngIf = 'character' class = 'data' appHeight defaultHeight = '{{character.mass}}'>
+    <div class = 'data-name'>
+        <span class='data-section-title'>{{character.name}}</span>
+    </div>
+    <div class = 'data-info'>
+        <span class='data-section-title'>Gender: </span>
+        <span  >{{character.gender}}</span>
+    </div>
+    <div class = 'data-info'>
+        <span class='data-section-title'>Mass: </span>
+        <span >{{character.mass}}kg</span>
+    </div>
+    <div class = 'data-info'>
+        <span class='data-section-title'>Height: </span>
+        <span  >{{character.height}} cm</span>
+    </div>
+    <div class = 'data-info'>
+        <span class='data-section-title'>Age: </span>
+        <span  >{{character.birth_year | birthdayPipe}}</span>
+    </div>
+</article>

@@ -1,0 +1,102 @@
+.module
+    
+    h1 
+        margin: 120px auto 50px auto,
+        color: gold,
+        -webkit-text-stroke: 5px blue,
+        text-align: center,
+        font-size: 80px,
+        text-shadow: 1px 1px 10px black,
+        font-family: fantasy
+
+    .container
+        display: flex,
+        justify-content: center,
+
+        .pokedex
+            margin:20px,
+            width : 480px,
+            border-radius: 20px,
+            position: relative
+
+            .button
+                position: absolute,
+                top: 370px,
+                width: 40px,
+                height: 40px,
+                border-radius: 50px,
+                padding-top: 10px,
+                padding-left: 10px,
+
+                
+                &.button_prev
+                    left: -20px,
+            
+                &.button_next
+                    right: -20px,
+
+                mat-icon
+                    color: white,
+                
+            .pokedex_intro
+                height: 160px,
+                color: white,
+                position: relative
+
+                .pokedex_id
+                    position: absolute,
+                    font-size: 20px,
+                    font-weight: bold,
+                    right: 30px,
+                    top: 35px,
+                .pokedex_image
+                    position: absolute,
+                    right: 120px,
+                    bottom: -100px,
+
+                    img
+                        width: 250px,
+                        height: 250px,
+
+                .pokedex_name
+                    font-size: 30px,
+                    font-weight: bold,
+                    padding: 30px 0px 20px 20px,
+
+                .pokedex_types
+                    padding-left: 30px,
+
+                    .pokedex_type
+                        background-color: rgba(203, 213, 218, 0.5),
+                        width: fit-content,
+                        border-radius: 10px,
+                        padding: 2px 8px,
+                        margin: 5px 0px 0px 4px,
+
+            .pokedex_info
+                background-color: white
+                border-radius: 20px,
+                height: 440px,
+                padding: 60px 10px 0px 10px,
+
+                    
+                .mat-tab-label
+                    color: black,
+
+                .mat-ink-bar
+                    background-color: black,
+
+                .pokedex_tab
+                    margin:40px 30px,
+                    color: grey,
+                    .pokedex_row
+                        display: flex,
+                        margin-bottom: 10px,
+                        .row_title, .row_value
+                            width: 150px,
+                        .row_value 
+                            width: 280px,
+                            span
+                                margin-right: 10px,
+                
+

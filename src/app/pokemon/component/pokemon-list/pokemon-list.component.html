@@ -1,0 +1,9 @@
+<div class="module">
+    <h1>{{title}}</h1>
+    <div class="container">
+      <div *ngFor = 'let pokemon of pokemons' class="item">
+        <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
+        <br>
+      </div>  
+    </div>
+</div>

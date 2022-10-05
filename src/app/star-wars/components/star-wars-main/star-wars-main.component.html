@@ -1,0 +1,10 @@
+<div class="module">
+  <h1>{{title}}</h1>
+  <div class="container">
+    <div *ngFor = 'let character of characters' class="item">
+      <app-star-wars-card [character]="character"></app-star-wars-card>
+      <br>
+    </div>  
+  </div>
+</div>
+

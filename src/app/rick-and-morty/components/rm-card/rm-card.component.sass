@@ -1,0 +1,57 @@
+.data 
+    position: relative,
+    background-color: steelblue,
+    border-radius: 10px,
+    box-shadow: 5px 5px 5px black,
+    height: 366px,
+
+    .data-intro-status 
+        position: absolute,
+        right: 12px,
+        top: 10px,
+        border-radius: 5px,
+        padding: 0 10px,
+        color: white,
+        width: fit-content,
+
+    .data-image 
+        padding: 6px,
+
+        .image 
+            width: 200px,
+            border-radius: 10px,
+
+    .data-info 
+        padding-left: 7px,
+
+        .data-section 
+            display: flex,
+            flex-wrap: wrap,
+            flex-direction: column,
+            margin-bottom: 10px,
+
+            .data-section-title 
+                font-weight: bold,
+
+            .data-wrap 
+                width: 200px,
+    
+
+
+[data-status = 'Alive'] 
+    background-color: green,
+
+
+[data-status = 'Dead'] 
+    background-color: red,
+
+
+[data-status = 'unknown'] 
+    background-color: grey,
+
+
+
+
+
+
+
