@@ -13,6 +13,7 @@ import { PokemonDetailModule } from './pokemon/pokemon-detail.module';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 
@@ -30,7 +31,8 @@ import {MatButtonModule} from '@angular/material/button';
     RickAndMortyModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule
 
   ],
   providers: [],

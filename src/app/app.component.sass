@@ -1,16 +1,42 @@
+.pages
+  display: flex,
+  flex-direction: column,
+  align-items: center,
+  margin-top: 100px,
+  
 .toolbar__mat 
   position: fixed,
   z-index: 1000,
   top: 0px,
 
+  .example-spacer 
+    flex: 1 1 auto,
 
-.example-spacer 
-  flex: 1 1 auto,
+.mat-drawer
+  background-color: rgba(15, 16, 17, 0.8),
+  width: 30%,
 
-a
-  text-decoration: none,
-  color: white,
+.mat-container
+  position: absolute,
+  top: 0,
+  bottom: 0,
+  left: 0,
+  right: 0,
+  background-color: transparent !important,
+  color: black,
 
-  &:hover
-    color: grey
+  .link
+    text-decoration: none,
+    color: white,
+
+    &:hover
+      color: grey,
+
+@media (max-width: 768px)
+  .pages
+    align-items: center !important,
+  .mat-drawer
+    width: 100% !important,
+
+
 

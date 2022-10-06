@@ -1,16 +1,32 @@
 <mat-toolbar class="toolbar__mat">
-  <!--<button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <button mat-icon-button class="menu" (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
-  </button>-->
+  </button>
   <span>Angular course</span>
   <span class="example-spacer"></span>
-  <button mat-button color = 'primary'><a class = 'link' routerLink="/rick-and-morty" routerLinkActive="active" ariaCurrentWhenActive="page">Rick and Morty</a></button>
-  <button mat-button color = 'primary'><a class = 'link' routerLink="/star-wars" routerLinkActive="active" ariaCurrentWhenActive="page">Star Wars</a></button>
-  <button mat-button color = 'primary'><a class = 'link' routerLink="/pokemon" routerLinkActive="active" ariaCurrentWhenActive="page">Pokemon</a></button>
-  <button mat-button color = 'primary'><a class = 'link' routerLink="/contact-form" routerLinkActive="active" ariaCurrentWhenActive="page">Contact form</a></button>
-  <button mat-button color = 'primary'><a class = 'link' routerLink="/airbnb/6811251" routerLinkActive="active" ariaCurrentWhenActive="page">Airbnb</a></button>
-  <span class="example-spacer"></span>
+  <a href = "https://www.linkedin.com/in/jonathan-lozada-cuenca" mat-icon-button class="toolbar-icon" aria-label="Linkdin icon">
+    <mat-icon svgIcon = "linkedin-icon"></mat-icon>
+  </a>
+  <a href = "https://github.com/JonathanLozadaGit" mat-icon-button class="toolbar-icon" aria-label="Github icon">
+    <mat-icon svgIcon = "github-icon"></mat-icon>
+  </a>
 </mat-toolbar>
 
-<!-- The routed views render in the <router-outlet>-->
+<mat-drawer-container class="mat-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="over">
+    <div class = "pages">
+      <button mat-button color = 'secondary'(click)="drawer.toggle()"><a class = 'link' routerLink="/rick-and-morty" routerLinkActive="active" ariaCurrentWhenActive="page">Rick and Morty</a></button>
+      <button mat-button color = 'secondary'(click)="drawer.toggle()"><a class = 'link' routerLink="/star-wars" routerLinkActive="active" ariaCurrentWhenActive="page">Star Wars</a></button>
+      <button mat-button color = 'secondary'(click)="drawer.toggle()"><a class = 'link' routerLink="/pokemon" routerLinkActive="active" ariaCurrentWhenActive="page">Pokemon</a></button>
+      <button mat-button color = 'secondary'(click)="drawer.toggle()"><a class = 'link' routerLink="/contact-form" routerLinkActive="active" ariaCurrentWhenActive="page">Contact form</a></button>
+      <button mat-button color = 'secondary'(click)="drawer.toggle()"><a class = 'link' routerLink="/airbnb/6811251" routerLinkActive="active" ariaCurrentWhenActive="page">Airbnb</a></button>
+    </div>
+    
+  </mat-drawer>
   <router-outlet></router-outlet>
+</mat-drawer-container>
+
+
+
+<!-- The routed views render in the <router-outlet>-->
+  
