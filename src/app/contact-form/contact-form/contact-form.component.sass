@@ -14,6 +14,7 @@
         flex-direction: column,
         align-content: center,
         flex-wrap: wrap,
+        padding: 0px 10px,
         h1 
             margin: 120px 0 10px 0,
             text-align: center,
@@ -37,7 +38,7 @@
         form
             background-color: rgba(203, 213, 218, 0.2),
             border-radius: 10px,
-            width: 500px,
+            max-width: 400px,
             padding:20px,
             margin: 30px 0px,
             display: flex,
@@ -47,51 +48,67 @@
             align-content: center,
 
             .item_row
-                width:400px,
+                width:100%,
                 align-self: stretch,
                 display: flex,
                 flex-wrap: wrap,
                 margin-bottom: 10px,
 
                 label
-                    width: 150px,
+                    width: 100%,
                     font-size: 20px,
                 input
                     padding: 10px,
-                    width: 350px,
+                    width: 100%,
                     border-radius: 5px,
 
             .item_col
-                width:380px,
+                width: 100%,
                 align-self: stretch,
                 display: flex,
                 flex-direction: column,
                 margin-bottom: 20px,
 
                 label
-                    width: 500px,
+                    width: 100%,
                     font-size: 20px,
                     margin-bottom: 10px,
                 select
+                    width: 100%,
                     padding: 10px,
 
                 textarea
+                    width: 93%,
                     padding: 10px,
                     height: 50px,
                     border-radius: 5px,
 
                 input
+                    width: 100%,
+                    padding: 10px,
+                    border-radius: 5px,
+                
+                input.date
+                    width: 93%,
                     padding: 10px,
                     border-radius: 5px,
 
             .item_radius
+                width: 100%,
                 align-self: stretch,
                 display: flex,
                 flex-wrap: wrap,
+                flex-direction: row,
                 margin-bottom: 10px,
 
-                input
-                    width: 100px,
+                .radius-label
+                    flex: 1,
+                    display: flex,
+                    flex-direction: row,
+
+                    input
+                        width: 20px,
+                        height: 20px,
 
             .item_multiple
                 align-self: stretch,
@@ -102,17 +119,25 @@
                 justify-content: center,
                 margin-bottom: 10px,
 
-                input 
-                    width: 15px,
-                label
-                    width: 100px,
-                    font-size: 14px,
+                .checkbox-label
+                    width: 50%,
+                    flex: 1,
+                    display: flex,
+                    flex-direction: row,
 
-            .error-msg
-                width: 350px,
-                background-color: crimson,
-                border-radius: 5px,
-                padding: 0px 10px,
+                    input 
+                        width: 15px,
+                    label
+                        width: 100px,
+                        font-size: 14px,
+
+            .error
+                width: 94%,
+                .error-msg
+                    width: 100%,
+                    background-color: crimson,
+                    border-radius: 5px,
+                    padding: 0px 10px,
                 
             button.submit
                 margin-top:20px,
@@ -123,10 +148,13 @@
                 color: white
 
 
+@media (max-width: 600px)
+    h1
+        font-size: 50px !important,
+        
+    h2
+       font-size: 18px !important,
 
-                
-                
-            
-
-            
-                
+    form
+        width: 80% !important,
+        max-width: 400px,

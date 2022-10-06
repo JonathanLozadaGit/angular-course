@@ -9,7 +9,7 @@
             <div class="item_row">
                 <label for="name">Nombre</label>
                 <input id="name" type="text" placeholder="Introduce tu nombre" formControlName="fullname">
-                <div *ngFor="let validation of validation_messages.fullname">
+                <div class = "error" *ngFor="let validation of validation_messages.fullname">
                     <div class="error-msg" *ngIf="profileForm?.get('fullname')?.hasError(validation.type) && (profileForm?.get('fullname')?.dirty || profileForm?.get('fullname')?.touched)">{{validation.message}}
                     </div>
                 </div>
@@ -17,7 +17,7 @@
             <div class="item_row">
                 <label for="email">Email</label>
                 <input id="email" type="text" placeholder="Introduce tu email" formControlName="email">
-                <div *ngFor="let validation of validation_messages.email">
+                <div class = "error" *ngFor="let validation of validation_messages.email">
                     <div class="error-msg" *ngIf="profileForm?.get('email')?.hasError(validation.type) && (profileForm?.get('email')?.dirty || profileForm?.get('email')?.touched)">{{validation.message}}
                     </div>
                 </div>
@@ -25,7 +25,7 @@
             <div class="item_row">
                 <label for="age">Edad</label>
                 <input id="age" type="number" placeholder="Introduce tu edad, debes ser mayor de edad" formControlName="age">
-                <div *ngFor="let validation of validation_messages.age">
+                <div class = "error" *ngFor="let validation of validation_messages.age">
                     <div class="error-msg" *ngIf="profileForm?.get('age')?.hasError(validation.type) && (profileForm?.get('age')?.dirty || profileForm?.get('age')?.touched)">{{validation.message}}
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                     <option value="" disabled>Selecciona tu rol actual</option>
                     <option *ngFor="let rol of roles" [ngValue]="rol">{{rol}}</option>
                 </select>
-                <div *ngFor="let validation of validation_messages.rol">
+                <div  class = "error" *ngFor="let validation of validation_messages.rol">
                     <div class="error-msg" *ngIf="profileForm?.get('rol')?.hasError(validation.type) && (profileForm?.get('rol')?.dirty || profileForm?.get('rol')?.touched)">{{validation.message}}
                     </div>
                 </div>
@@ -44,11 +44,11 @@
             <div class="item_col">
                 <label for="reco">¿Recomedarías está página a una persona?</label>
                 <div class="item_radius">
-                    <ng-container *ngFor="let option of recoOthers, let i = index">
+                    <div class = "radius-label" *ngFor="let option of recoOthers, let i = index">
                         <input id = "{{'op'+ i}}"  type="radio" value='{{option.key}}' formControlName="recoOth">{{option.value}}
-                    </ng-container>
+                    </div>
                 </div>
-                <div *ngFor="let validation of validation_messages.option">
+                <div class = "error" *ngFor="let validation of validation_messages.option">
                     <div class="error-msg" *ngIf="profileForm?.get('recoOth')?.hasError(validation.type) && (profileForm?.get('recoOth')?.dirty || profileForm?.get('recoOth')?.touched)">{{validation.message}}
                     </div>
                 </div>
@@ -56,12 +56,12 @@
             <div class="item_col">
                 <label for="recommendation">¿Qué recomendaciones te gustaría recibir?</label>
                 <div class="item_multiple">
-                    <ng-container *ngFor="let option of recoOptions, let i = index">
+                    <div class = "checkbox-label" *ngFor="let option of recoOptions, let i = index">
                         <input id = "{{'op'+ i}}"  type="checkbox" value='{{option.key}}' formControlName="recoOpt">
                         <label for="{{'op'+ i}}" >{{option.value}}</label>
-                    </ng-container>
+                    </div>
                 </div>
-                <div *ngFor="let validation of validation_messages.option">
+                <div class = "error" *ngFor="let validation of validation_messages.option">
                     <div class="error-msg" *ngIf="profileForm?.get('recoOpt')?.hasError(validation.type) && (profileForm?.get('recoOpt')?.dirty || profileForm?.get('recoOpt')?.touched)">{{validation.message}}
                     </div>
                 </div>
@@ -69,8 +69,8 @@
             </div>
             <div class="item_col">
                 <label for="pref">¿Cuándo preferirías que te contactásemos?</label>
-                <input type="date" value='Date' formControlName="date">
-                <div *ngFor="let validation of validation_messages.date">
+                <input type="date" value='Date' formControlName="date" class = "date">
+                <div class = "error" *ngFor="let validation of validation_messages.date">
                     <div class="error-msg" *ngIf="profileForm?.get('date')?.hasError(validation.type) && (profileForm?.get('date')?.dirty || profileForm?.get('date')?.touched)">{{validation.message}}
                     </div>
                 </div>
@@ -78,7 +78,7 @@
             <div class="item_col">
                 <label for="text">¿Otros comentarios o sugerencias?</label>
                 <textarea id="text" type="text" placeholder="Introduce tus comentarios..." formControlName="text"></textarea>
-                <div *ngFor="let validation of validation_messages.text">
+                <div class = "error" *ngFor="let validation of validation_messages.text">
                     <div class="error-msg" *ngIf="profileForm?.get('text')?.hasError(validation.type) && (profileForm?.get('text')?.dirty || profileForm?.get('text')?.touched)">{{validation.message}}
                     </div>
                 </div>

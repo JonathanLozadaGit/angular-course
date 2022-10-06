@@ -34,7 +34,7 @@ export class ContactFormComponent implements OnInit {
         Validators.maxLength(25),
         Validators.required,
       ]),
-      updateOn: 'submit',
+      updateOn: 'blur',
     }],
     email: ['',{
       validators: Validators.compose([
