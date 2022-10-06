@@ -9,6 +9,7 @@ const routes: Routes = [
   {path: 'pokemon', loadChildren: () => import('./pokemon/pokemon.module').then(m => m.PokemonModule)},
   {path: 'pokemon/:id', loadChildren: () => import('./pokemon/pokemon-detail.module').then(m => m.PokemonDetailModule)},
   {path: 'contact-form', loadChildren: () => import('./contact-form/contact-form.module').then(m => m.ContactFormModule)},
+  {path: 'airbnb/:id', loadChildren: () => import('./airbnb-detail/airbnb-detail.module').then(m => m.AirbnbDetailModule)},
 ];
 
 @NgModule({

@@ -30,6 +30,7 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "./node_modules/leaflet/dist/leaflet.css",
               "src/styles.sass"
             ],
             "scripts": []

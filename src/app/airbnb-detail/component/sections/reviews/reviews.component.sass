@@ -1,0 +1,65 @@
+.review_section .score_list 
+    display: flex,
+    flex-direction: row,
+    flex-wrap: wrap,
+    margin-bottom: 30px,
+
+
+.review_section .score 
+    flex: 1,
+    max-width: 100%,
+    min-width: 350px,
+    height: 20px,
+    margin: 10px 20px 10px 0px,
+
+    display: flex,
+    flex-direction: row,
+    justify-content: space-between,
+
+
+progress 
+    -webkit-appearance: none,
+    height: 4px,
+    margin: 4px 10px 0px 0px,
+
+  
+::-webkit-progress-bar  
+    background-color: whitesmoke,
+
+::-webkit-progress-value 
+    background-color: black,
+
+
+.review_section .review_list 
+    display: flex,
+    flex-direction: row,
+    flex-wrap: wrap,
+
+
+.review_section .review 
+    flex: 1,
+    max-width: 100%,
+    min-width: 400px,
+    margin: 15px 30px 15px 0px,
+
+
+.review_section .review .review_data 
+    display: flex,
+    flex-direction: row,
+    flex-wrap: wrap,
+    margin-bottom: 15px,
+
+
+.review_section .review .review_data img
+    border-radius: 15px,
+    margin-right: 20px,
+    width: 30px,
+    height: 30px,
+
+
+@media (max-width: 600px) 
+    .review_section .score,
+    .review_section .review
+    
+        min-width: 80%,
+    

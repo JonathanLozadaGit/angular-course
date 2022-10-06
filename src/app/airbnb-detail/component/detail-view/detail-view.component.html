@@ -1,0 +1,45 @@
+<ng-container *ngIf = "detail">
+    <div class="module">
+    <!--INIT SECTION-->
+        <app-intro [detail] = "detail" class="section"></app-intro>
+    <!--REVIEW SECTION-->
+        <app-reviews [detail] = "detail" class="section"></app-reviews>
+    <!--MAP SECTION-->
+        <div class="section section_map">
+            <div class="title">Where you’ll be</div>
+            <div class = "view_map">
+                <app-map-component [position] = "detail.address.location.coordinates"></app-map-component>
+            </div>
+            <div class="street_item street_map">{{detail.address.street}}</div>
+            <div class="street_item substreet_map">
+                <span *ngIf = "detail.address.suburb">{{detail.address.suburb}}. </span>
+                <span *ngIf = "detail.address.government_area">{{detail.address.government_area}}.</span>
+            </div>
+            <div class="street_item link">View more ></div>
+        </div>
+    <!--HOST SECTION-->
+        <div class="section section_host">
+            <div class = "host host_intro">
+                <img  *ngIf = "detail.host.host_has_profile_pic" class = "host_image" alt = "Profile image" src = "{{detail.host.host_thumbnail_url}}" onerror="this.src='/assets/images/default.png'">
+                <div class="host_name">
+                    <div class = "title">Hosteded by {{detail.host.host_name}}</div>
+                    <div>Se registró en febrero 2019</div>
+                </div>
+            </div>
+            <div class = "host host_info">
+                <span *ngIf = "detail.host.host_is_superhost">⊛ Superhost</span>
+                <span *ngIf = "detail.host.host_identity_verified">⊛ Identity verified</span>
+            </div>
+            <div class = "host host_super" *ngIf = "detail.host.host_is_superhost">
+                <div class = "title_2">{{detail.host.host_name}} is a Superhost</div>
+                <div>Superhosts are experienced, highly-rated hosts who are committed to providing great stays for guests.</div>
+            </div>
+            <div class=  "host host_response" *ngIf = "detail.host.host_response_rate">Response rate: {{detail.host.host_response_rate}}%</div>
+            <div class = "host host_time" *ngIf = "detail.host.host_response_time">Response time: {{detail.host.host_response_time}}</div>
+            <div class = "host" *ngIf = "detail.host.host_about">{{detail.host.host_about}}</div>
+            <div class = "host">
+                <a href = "{{detail.host.host_url}}"><button class = "button">Contact host</button></a>
+            </div>
+        </div>
+    </div>
+</ng-container>

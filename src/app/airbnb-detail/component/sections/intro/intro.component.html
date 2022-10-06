@@ -1,0 +1,84 @@
+<ng-container *ngIf = "detail">
+    <div class="intro_section">
+        <div class = "intro">
+            <div class="intro_name">
+                <div class="name">{{detail.name}}</div>
+                <div class="review">
+                    <span *ngIf = "detail.review_scores.review_scores_rating" >★{{detail.review_scores.review_scores_rating/10}}·</span>
+                    <span class="value">{{detail.number_of_reviews}} reviews</span>
+                    <span class="street">{{detail.address.street}}</span>
+                </div>
+            </div>
+            <div class="intro_share">⊛Share    ❤Save</div>
+        </div>
+        <div class = "image">
+            <img src = "{{detail.images.picture_url}}" alt = "Detail image">
+        </div>
+        <div class="more">
+            <div class="util">
+                <div class = "util_row border_bottom ">
+                    <div class="flex">
+                        <div class="text ">
+                            <div class = "title">
+                                {{detail.room_type}} in {{detail.property_type}} hosted by {{detail.host.host_name}}
+                            </div>
+                            <div>
+                                {{detail.accommodates}} guests·{{detail.bedrooms}} rooms·{{detail.beds}} beds·{{detail.bathrooms.$numberDecimal}} baths
+                            </div>
+                        </div>
+                         <img  *ngIf = "detail.host.host_has_profile_pic" class = "image_" src = "{{detail.host.host_thumbnail_url}}" alt = "Profile image" onerror="this.src='/assets/images/default.png'">
+                    </div>
+                </div>
+                <div class = "util_row border_bottom">Cancellation policy: {{detail.cancellation_policy}}</div>
+                <div class = "util_row">{{detail.summary}}</div>
+            </div>
+            <div class="form">
+                <div class="form_box">
+                    <div class = "form_intro">
+                        <div class="price"><span class = "price_value">{{priceDay}} $</span>/night</div>
+                        <div class="score">
+                            <span >★{{detail.review_scores.review_scores_rating/10}}·</span>
+                            <span class="value">{{detail.number_of_reviews}} reviews</span>
+                        </div>
+                    </div>
+                    <form [formGroup]="airbnForm" (ngSubmit)="onSubmit()">
+                        
+                        <div class="dates">
+                            <input type = "date" placeholder="Check in" formControlName="startF" type="text" onfocus="(this.type='date')">
+                            <input type = "date" placeholder="Check out" formControlName="endF"   type="text" onfocus="(this.type='date')">
+                        </div>
+                        <div class="guests">
+                            <select name="guests" formControlName="guestsF"  >
+                                <option value="" disabled>Guests</option>
+                                <option  value = "{{i+1}}" *ngFor="let _ of [].constructor(detail.accommodates), let i = index" >{{i+1}} Guest</option>
+                            </select>
+                        </div>
+                        <button class = 'submit' type="submit">Check availability</button>
+                    </form>
+                    <div *ngIf = "hasResult" class="form_result">
+                        <div class="data">
+                            <div class="data_item">
+                                <span>{{priceDay}} $ x {{daysBetween}} nights</span>
+                                <span>{{priceDays}} $</span>
+                            </div>
+                            <div class="data_item">
+                                <span>Cleaning fee</span>
+                                <span>{{cleaningFee}} $</span>
+                            </div>
+                            <div class="data_item">
+                                <span>Security deposit</span>
+                                <span>{{securityDep}} $</span>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <div class="data_item">
+                                <span>Total</span>
+                                <span>{{priceTotal}} $</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
