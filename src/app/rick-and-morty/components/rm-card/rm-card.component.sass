@@ -1,28 +1,35 @@
 .data 
-    position: relative,
+    
     background-color: steelblue,
     border-radius: 10px,
     box-shadow: 5px 5px 5px black,
-    height: 366px,
+    width: 215px,
+    height: 100%,
+    display: flex,
+    flex-direction: column,
+    flex-wrap: wrap,
 
-    .data-intro-status 
-        position: absolute,
-        right: 12px,
-        top: 10px,
-        border-radius: 5px,
-        padding: 0 10px,
-        color: white,
-        width: fit-content,
+    
 
     .data-image 
         padding: 6px,
+        position: relative,
 
         .image 
             width: 200px,
             border-radius: 10px,
 
+        .data-intro-status 
+            position: absolute,
+            right: 12px,
+            top: 10px,
+            border-radius: 5px,
+            padding: 0 10px,
+            color: white,
+            width: fit-content,
+
     .data-info 
-        padding-left: 7px,
+        padding: 6px,
 
         .data-section 
             display: flex,
@@ -33,9 +40,16 @@
             .data-section-title 
                 font-weight: bold,
 
-            .data-wrap 
-                width: 200px,
+@media (max-width: 600px)
+    .data
+        max-width: 142px,
+
+    .image
+        width: 130px !important,
+        height: 130px !important,
     
+    .data-section 
+        margin-bottom: 2px !important,
 
 
 [data-status = 'Alive'] 
