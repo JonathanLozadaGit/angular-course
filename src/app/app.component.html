@@ -2,7 +2,7 @@
   <button mat-icon-button class="menu hidden_inmain" (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <a class = 'title hidden_inmain' routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" >
+  <a class = 'title hidden_inmain' routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="drawer.close()">
     <span>Angular course</span>
   </a>
   <span class="example-spacer"></span>
