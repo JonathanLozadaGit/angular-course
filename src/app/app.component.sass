@@ -1,13 +1,19 @@
 .pages
+  font-family: 'Broken Console', sans-serif,
   display: flex,
   flex-direction: column,
   align-items: center,
   margin-top: 100px,
   
 .toolbar__mat 
+  font-family: 'Broken Console', sans-serif,
   position: fixed,
   z-index: 1000,
   top: 0px,
+
+  .title
+    color: white,
+
 
   .example-spacer 
     flex: 1 1 auto,
@@ -29,8 +35,6 @@
     text-decoration: none,
     color: white,
 
-    &:hover
-      color: grey,
 
 @media (max-width: 768px)
   .pages
