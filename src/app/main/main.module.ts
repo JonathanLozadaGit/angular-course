@@ -12,8 +12,8 @@ import { CardComponent } from './component/card/card.component';
     CardComponent
   ],
   imports: [
+    MainRoutingModule,
     CommonModule,
-    MainRoutingModule
   ]
 })
 export class MainModule { }
