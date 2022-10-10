@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import * as L from 'leaflet';
 
 @Component({
@@ -6,12 +6,10 @@ import * as L from 'leaflet';
   templateUrl: './map-component.component.html',
   styleUrls: ['./map-component.component.sass']
 })
-export class MapComponentComponent implements OnInit, AfterViewInit  {
+export class MapComponentComponent implements  AfterViewInit  {
 
   map : any;
   @Input() position : number[] = [];
-
-  constructor() { }
 
   private initMap(): void {
     this.map = L.map('map', {
@@ -38,10 +36,6 @@ export class MapComponentComponent implements OnInit, AfterViewInit  {
 
   ngAfterViewInit(): void {
     this.initMap();
-  }
-
-  
-  ngOnInit(): void {
   }
 
 }

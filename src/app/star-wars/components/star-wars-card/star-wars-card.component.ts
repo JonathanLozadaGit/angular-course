@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Character } from '../../models/star-wars-model';
 
 @Component({
@@ -6,14 +6,8 @@ import { Character } from '../../models/star-wars-model';
   templateUrl: './star-wars-card.component.html',
   styleUrls: ['./star-wars-card.component.sass']
 })
-export class StarWarsCardComponent implements OnInit {
+export class StarWarsCardComponent {
 
   @Input() character: Character | undefined;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 
 }

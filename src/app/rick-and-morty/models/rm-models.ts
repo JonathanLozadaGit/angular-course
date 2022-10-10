@@ -51,10 +51,3 @@ export interface CharactersResponse {
     name: string;
     url:  string;
    }
-
-/* TODO: podemos crear const para valores por defecto
-   const DEFAULT_CHARACTER : Character {
-        id : 0,
-        
-    }
-   */

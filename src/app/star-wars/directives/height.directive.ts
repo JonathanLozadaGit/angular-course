@@ -10,7 +10,8 @@ export class HeightDirective {
 
   @HostListener('mouseenter') onMouseEnter() {
     let height = parseInt(this.defaultHeight);
-    let color = height >= 70 && height <= 80 ? 'darkseagreen' : height > 80 ? 'crimson' : '';
+    let color = height >= 70 && height <= 80 ? 'darkseagreen' : '';
+    color = height > 80 ? 'crimson' : '';
     this.el.nativeElement.style.backgroundColor = color;
   }
   @HostListener('mouseleave') onMouseLeave() {

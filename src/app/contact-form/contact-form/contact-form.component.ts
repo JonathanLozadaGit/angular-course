@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, Validators,  } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormBuilder, Validators,  } from '@angular/forms';
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.sass']
 })
-export class ContactFormComponent implements OnInit {
+export class ContactFormComponent  {
 
   title = 'Contact form';
   subtitle = 'Gracias por tomarte el tiempo para contactar con nosotros y ayudarnos a mejorar';
@@ -114,8 +114,6 @@ export class ContactFormComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { }
 
-  ngOnInit(): void {
-  }
 
   ngAfterViewInit() {
     document.querySelector('body')?.classList.add('contact');

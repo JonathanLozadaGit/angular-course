@@ -10,7 +10,7 @@ export class PokemonCardComponent implements OnInit {
 
   @Input() pokemon: Pokemon | undefined;
   type : string | undefined = '';
-  constructor() { }
+
 
   ngOnInit(): void {
     this.type = this.pokemon?.detail?.types[0].type.name;

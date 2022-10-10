@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Detail } from 'src/app/airbnb-detail/models/detail-model';
 
 @Component({
@@ -6,13 +6,8 @@ import { Detail } from 'src/app/airbnb-detail/models/detail-model';
   templateUrl: './reviews.component.html',
   styleUrls: ['./reviews.component.sass']
 })
-export class ReviewsComponent implements OnInit {
+export class ReviewsComponent {
 
   @Input() detail: Detail | undefined;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
