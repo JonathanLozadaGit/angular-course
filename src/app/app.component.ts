@@ -17,7 +17,8 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon(
       "linkedin-icon",
       this.domSanitizer.bypassSecurityTrustResourceUrl("assets/icons/linkedin-icon.svg")
-    ),
+    );
+    
     this.matIconRegistry.addSvgIcon(
       "github-icon",
       this.domSanitizer.bypassSecurityTrustResourceUrl("assets/icons/github-icon.svg")

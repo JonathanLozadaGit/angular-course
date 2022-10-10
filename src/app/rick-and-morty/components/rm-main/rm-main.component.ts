@@ -27,10 +27,10 @@ export class RmMainComponent implements OnInit {
   }
 
   killAllCharacters () {
-    this.characters.filter(character => character.status !== 'unknown').map( character => character.status = 'Dead');
+    this.characters.filter(character => character.status !== 'unknown').forEach( character => character.status = 'Dead');
   }
 
   reviveAllCharacters () {
-    this.characters.filter(character => character.status !== 'unknown').map( character => character.status = 'Alive');
+    this.characters.filter(character => character.status !== 'unknown').forEach( character => character.status = 'Alive');
   }
 }
